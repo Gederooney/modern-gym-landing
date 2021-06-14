@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@200;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Modern Gym by Gedeon Rony</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				height: 100vh;
+				background-image: url("./bg.png");
+				background-size: cover;
+				background-position: center;
+				color: #fff;
+			}
+			.nav__menu-mobile {
+				display: none;
+			}
+			/* nav */
+
+			.nav {
+				display: grid;
+				grid-template-rows: 100%;
+				grid-template-columns: 100px auto 200px;
+				height: 70px;
+				color: #fff;
+			}
+			ul {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
+				height: 100%;
+				list-style-type: none;
+				font-family: "Lato", sans-serif;
+				font-size: 0.9rem;
+			}
+			.nav ul li {
+				margin: 0 20px;
+				padding: 5px 0;
+			}
+			.active {
+				border-bottom: 2px solid #fc6d2d;
+				font-weight: bold;
+			}
+			.logo,
+			.login {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: "Lato", sans-serif;
+			}
+			.logo {
+				padding-left: 50px;
+			}
+			.login {
+				padding-right: 50px;
+			}
+			.login ul li {
+				border: none;
+				border-radius: 10px;
+				background-color: #fc6d2d;
+				padding: 5px 10px;
+			}
+			/* nav-mobile */
+			.nav-mobile {
+				display: none;
+				visibility: hidden;
+			}
+			.main {
+				height: calc(100vh - 70px);
+				display: grid;
+				grid-template-columns: auto 200px;
+				grid-template-rows: 100%;
+			}
+			.hero {
+				padding-left: 60px;
+				font-family: "Poppins", sans-serif;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				padding-bottom: 90px;
+			}
+			h1 {
+				font-size: 70px;
+				line-height: 65px;
+			}
+			.hero__text {
+				padding-left: 5px;
+				color: #fc6d2d;
+			}
+			.hero .header {
+				margin-bottom: 40px;
+				margin-top: 20px;
+			}
+			.description {
+				width: 600px;
+				margin-top: 20px;
+				margin-bottom: 40px;
+				border-left: solid 2px #fc6d2d;
+				padding-left: 10px;
+				margin-left: 5px;
+			}
+			.btns {
+				display: flex;
+				flex-direction: row;
+				margin-top: 20px;
+			}
+			.more,
+			.horaires {
+				margin-right: 20px;
+				padding: 10px;
+				border-radius: 20px;
+			}
+			.horaires {
+				border: none;
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+			.more {
+				border: none;
+
+				background-color: #fc6d2d;
+			}
+			.social {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			a,
+			a:visited {
+				text-decoration: none;
+				color: #fff;
+			}
+			.social img {
+				width: 15px;
+				height: 15px;
+				margin-bottom: 10px;
+			}
+			.dots {
+				height: 40px;
+				width: 40px;
+				background-color: #fc6d2d;
+				margin-bottom: 10px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.dots a {
+				margin-top: 10px;
+			}
+			@media screen and (max-width: 767px) {
+				body {
+					width: 100vw;
+				}
+				.hero {
+					padding-left: 10px;
+					font-family: "Poppins", sans-serif;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+					padding-bottom: 10px;
+				}
+				.nav {
+					visibility: hidden;
+					display: none;
+				}
+				.nav-mobile {
+					visibility: visible;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					height: 50px;
+					padding: 0 10px;
+					font-family: "Lato", sans-serif;
+				}
+				.nav-mobile .toggle img {
+					width: 20px;
+					height: 20px;
+					color: #fff;
+					background-color: #fc6d2d;
+				}
+				h1 {
+					font-size: 30px;
+					line-height: 35px;
+				}
+				.main {
+					height: calc(100vh - 50px);
+					display: grid;
+					grid-template-columns: 100%;
+					grid-template-rows: auto 200px;
+				}
+				.hero__text {
+					padding-left: 5px;
+					color: #fc6d2d;
+				}
+				.hero .header {
+					margin-bottom: 40px;
+					margin-top: 20px;
+				}
+				.description {
+					width: 80%;
+					margin-top: 20px;
+					margin-bottom: 40px;
+					border-left: solid 2px #fc6d2d;
+					padding-left: 10px;
+					margin-left: 5px;
+				}
+				.social,
+				.deco {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					padding-bottom: 10px;
+				}
+				.dots {
+					height: 40px;
+					width: 40px;
+					background-color: #fc6d2d;
+					margin-right: 10px;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.nav__menu-mobile {
+					position: absolute;
+					display: block;
+					transition-timing-function: ease-out;
+					top: -100%;
+				}
+				.nav_active {
+					width: 100%;
+					transition-timing-function: ease-in;
+					top: 50px;
+				}
+				ul {
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+					background-color: #fff;
+					color: #000;
+					width: 100%;
+				}
+				.active {
+					border: none;
+					background-color: #fc6d2d;
+				}
+				ul li {
+					padding: 8px 5px;
+					margin: 0;
+					width: 100%;
+					padding-left: 10px;
+				}
+			}
+		</style>
+		<script type="text/javascript">
+			function mobile_nav() {
+				var x = document.getElementById("myTopnav");
+				x.className === "nav__menu-mobile"
+					? x.classList.add("nav_active")
+					: x.classList.remove("nav_active");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="nav">
+				<div class="logo">Logo</div>
+				<div class="nav-menu">
+					<ul>
+						<li class="active"><a href="index.html">Accueil</a></li>
+						<li>Qui sommes nous?</li>
+						<li>Médias</li>
+						<li>Missions</li>
+					</ul>
+				</div>
+				<div class="login">
+					<ul>
+						<li>connexion</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-mobile">
+				<div class="logo-mobil">Logo</div>
+				<div class="toggle">
+					<img src="./menu.png" alt="" onclick="mobile_nav()" />
+				</div>
+			</div>
+			<div id="myTopnav" class="nav__menu-mobile">
+				<ul>
+					<li class="active"><a href="index.html">Accueil</a></li>
+					<li>Qui sommes nous?</li>
+					<li>Médias</li>
+					<li>Missions</li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="hero">
+					<div class="hero__text">
+						<p>Bienvenu au gym</p>
+					</div>
+					<div class="header">
+						<h1>Une bonne santé <br />passe par le sport</h1>
+					</div>
+					<div class="description">
+						<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s,
+						</p>
+					</div>
+					<div class="btns">
+						<div class="more">En savoir plus</div>
+						<div class="horaires">Horaires</div>
+					</div>
+				</div>
+				<div class="social">
+					<div class="deco">
+						<div class="dots">
+							<a href="#" class="social-link">
+								<img src="./facebook-3-32.png" alt="" class="facebook" />
+							</a>
+						</div>
+						<div class="dots">
+							<a href="#" class="social-link">
+								<img src="./instagram-32.png" alt="" class="instagram" />
+							</a>
+						</div>
+						<div class="dots">
+							<a href="#" class="social-link">
+								<img src="/snapchat-32.png" alt="" class="snap" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
