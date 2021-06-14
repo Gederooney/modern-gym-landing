@@ -2,6 +2,6 @@
 
 ## Here is what it's looks like
 
-<img src="./look.png"
+<img src="./looks.png"
      alt="Modern gym website landing"
       />
