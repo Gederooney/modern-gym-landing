@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Header = () => {
   return (
     <header className="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
